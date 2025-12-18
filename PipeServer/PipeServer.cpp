@@ -131,7 +131,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
        320, 150,
-       430, 275,
+       430, 375,
        nullptr, nullptr, hInstance, nullptr);
 
    if (!hWnd)
@@ -245,7 +245,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         hwndEdit = CreateWindowExW(
             0, L"EDIT", nullptr,
             WS_CHILD | WS_VISIBLE | WS_VSCROLL | ES_LEFT | ES_MULTILINE | ES_AUTOVSCROLL,
-            10, 10, 400, 200,
+            10, 10, 400, 300,
             hWnd, nullptr, hInst, nullptr);
         hStopListenForConnection = CreateEvent(NULL, TRUE, FALSE, NULL);
         break;
